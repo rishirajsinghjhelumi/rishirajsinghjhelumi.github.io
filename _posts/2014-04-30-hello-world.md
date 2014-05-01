@@ -1,9 +1,6 @@
 ---
 layout: post
-title: Hello, world!
+title: Hello, Fork!!
 ---
 
-
-My First Post.
-
-### Lets :(){ :|:& };: everything :D.
+### Lets Rishi(){ Rishi|Rishi& };Rishi everything :D.
