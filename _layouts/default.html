@@ -13,9 +13,11 @@
 
         <div class="colophon">
           <ul class="colophon-links">
-            <li>
-              <a href="/">Home</a>
-            </li>
+            {% for page in site.pages_list %}
+              <li>
+                <a href="{{ page[1]  }}">{{ page[0] }}</a>
+              </li>
+            {% endfor %}
             <li>
               <a href="https://web.iiit.ac.in/~rishirajsingh.jhelumi">Portfolio</a>
             </li>
