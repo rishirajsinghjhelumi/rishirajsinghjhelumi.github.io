@@ -10,5 +10,7 @@ markdown:     rdiscount
 permalink:    pretty
 pygments:     true
 paginate:     5
+gems:
+- jemoji
 
 pages_list:       {'Home':'/','About':'/about','Archive':'/archive','Feed':'/atom.xml'}
