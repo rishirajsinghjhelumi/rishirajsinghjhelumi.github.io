@@ -3,11 +3,21 @@
 
   {% include head.html %}
 
+  <style type="text/css">
+  .title::first-letter{ 
+    color:#132135;
+  }
+  </style>
+
   <body class="theme-base-08">
 
     <header class="masthead">
       <div class="masthead-inner">
-        <h1>{{ site.title }}</h1>
+        <!-- <h1> {{ site.title }}</h1> -->
+        <h1 class="title">Rishi</h1>
+        <h1 class="title">Raj</h1>
+        <h1 class="title">Singh</h1>
+        <h1 class="title">Jhelumi</h1>
         <h2> R(){ R|R& };R </h2>
         <p class="lead">{{ site.description }}</p>
 
@@ -18,7 +28,7 @@
                 <a href="{{ page[1]  }}">{{ page[0] }}</a>
               </li>
             {% endfor %}
-            <li>
+           <!--  <li>
               <a href="https://web.iiit.ac.in/~rishirajsingh.jhelumi">Portfolio</a>
             </li>
             <li>
@@ -29,7 +39,7 @@
             </li>
             <li>
               <a href="https://plus.google.com/u/0/+RishiRajSinghJhelumi">Google+</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
