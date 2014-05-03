@@ -1,6 +1,10 @@
 ---
 layout: post
 title: GSoC 2014 with GNOME Maps !!
+tags:
+- GNOME
+- GSoC
+- Introduction
 ---
 
 I have been selected for [GSoC](http://www.google-melange.com/gsoc/projects/list/google/gsoc2014) this year with [GNOME](https://gnome.org "GNOME").
