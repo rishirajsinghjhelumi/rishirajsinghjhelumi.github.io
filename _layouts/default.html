@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <style type="text/css">
+  .title::first-letter{ 
+    color:#132135;
+  }
+  img.emoji{
+    border:0;
+    padding:0;
+    margin:0;
+    display: inline;
+  }
+  .emoji-icon{
+    display:inline-block;
+    height:20px;
+    width:20px;
+    vertical-align:middle;
+    background-repeat:no-repeat;
+    background-size:20px 20px;
+  }
+  .tag_box {
+    list-style: none;
+    margin: 0;
+    overflow: hidden; 
+    margin-left: -40px;
+  }
+
+  .tag_box li {
+    line-height: 28px; 
+  }
+
+  .tag_box li i {
+    opacity: 0.9; 
+  }
+
+  .tag_box.inline li {
+    float: left; 
+  }
+
+  .tag_box a {
+    padding: 3px 6px;
+    margin: 2px;
+    background: #eee;
+    color: #555;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px dashed #cccccc; 
+  }
+
+  .tag_box a span {
+    vertical-align: super;
+    font-size: 0.8em; 
+  }
+
+  .tag_box a:hover {
+    background-color: #e5e5e5; 
+  }
+
+  .tag_box a.active {
+    background: #57A957;
+    border: 1px solid #4c964d;
+    color: #FFF; 
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 100px;
+  }
+
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 100px;
+    background-clip: padding-box;
+    border: 2px solid rgba(0, 0, 0, 0);
+    min-height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0, 0, 0, 0.61);
+    -webkit-border-radius: 100px;
+  }
+    </style>
+
+    <body class="theme-base-08">
+    {% include sharing.html %}
+
+      <header class="masthead">
+        <div class="masthead-inner">
+          <!-- <h1> {{ site.title }}</h1> -->
+          <h1 class="title">Rishi</h1>
+          <h1 class="title">Raj</h1>
+          <h1 class="title">Singh</h1>
+          <h1 class="title">Jhelumi</h1>
+          <h2> R(){ R|R& };R </h2>
+          <!-- <p class="lead">{{ site.description }}</p> -->
+
+          <div class="colophon">
+            <ul class="colophon-links">
+              {% for page in site.pages_list %}
+                <li>
+                  <a href="{{ page[1]  }}">{{ page[0] }}</a>
+                </li>
+            {% endfor %}
+           <!--  <li>
+              <a href="https://web.iiit.ac.in/~rishirajsingh.jhelumi">Portfolio</a>
+            </li>
+            <li>
+              <a href="https://github.com/rishirajsinghjhelumi">Github</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/RockerRishiRaj">Facebook</a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/u/0/+RishiRajSinghJhelumi">Google+</a>
+            </li> -->
+          </ul>
+          {% include github_follow_button.html %}
+        </div>
+      </div>
+    </header>
+
+    <div class="content container">
+      {{ content }}
+      {% include comments.html %}
+    </div>
+  </body>
+  {% include google_analytics.html %}
+</html>

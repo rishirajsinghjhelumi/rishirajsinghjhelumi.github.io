@@ -1,0 +1,21 @@
+title:        'Rishi Raj Singh Jhelumi'
+tagline:      'Lets R(){ R|R& };R'
+description:  'My Personal Blog ( R(){ R|R& };R ).'
+url:          http://rishirajsinghjhelumi.github.io
+version:      1.0.0
+author:
+  name:       'Rishi Raj Singh Jhelumi'
+  email:      'rishiraj.devel@gmail.com'
+markdown:     rdiscount
+permalink:    pretty
+pygments:     true
+paginate:     5
+gems:
+- jemoji
+- jekyll-mentions
+- jekyll-sitemap
+
+pages_list:       {'Home':'/','About':'/about','Archive':'/archive','Feed':'/atom.xml'}
+
+github:
+ user: rishirajsinghjhelumi
