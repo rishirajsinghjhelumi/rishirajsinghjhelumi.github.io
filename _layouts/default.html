@@ -23,7 +23,6 @@
   }
   .tag_box {
     list-style: none;
-    margin: 0;
     overflow: hidden; 
     margin-left: -40px;
   }
@@ -87,10 +86,13 @@
     background: rgba(0, 0, 0, 0.61);
     -webkit-border-radius: 100px;
   }
+  .share-button {
+    margin-top: 0px;
+    float: right;
+  }
     </style>
 
     <body class="theme-base-08">
-    {% include sharing.html %}
 
       <header class="masthead">
         <div class="masthead-inner">
@@ -131,6 +133,16 @@
       {{ content }}
       {% include google_comments.html %}
     </div>
+    <script src="/public/js/share.min.js"></script>
+    <script>
+      var share = new Share("#share-button", {
+        networks: {
+          facebook: {
+            app_id: "xxx",
+          }
+        }
+      });
+    </script>
   </body>
   {% include google_analytics.html %}
 </html>
