@@ -48,6 +48,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/index.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700|Abril+Fatface">
 
   <!-- Icons -->
@@ -59,114 +60,7 @@
 </head>
 
 
-  <style type="text/css">
-  .title::first-letter{ 
-    color:#132135;
-  }
-  img.emoji{
-    border:0;
-    padding:0;
-    margin:0;
-    display: inline;
-  }
-  .emoji-icon{
-    display:inline-block;
-    height:20px;
-    width:20px;
-    vertical-align:middle;
-    background-repeat:no-repeat;
-    background-size:20px 20px;
-  }
-  .tag_box {
-    list-style: none;
-    margin: 0;
-    overflow: hidden; 
-    margin-left: -40px;
-  }
-
-  .tag_box li {
-    line-height: 28px; 
-  }
-
-  .tag_box li i {
-    opacity: 0.9; 
-  }
-
-  .tag_box.inline li {
-    float: left; 
-  }
-
-  .tag_box a {
-    padding: 3px 6px;
-    margin: 2px;
-    background: #eee;
-    color: #555;
-    border-radius: 3px;
-    text-decoration: none;
-    border: 1px dashed #cccccc; 
-  }
-
-  .tag_box a span {
-    vertical-align: super;
-    font-size: 0.8em; 
-  }
-
-  .tag_box a:hover {
-    background-color: #e5e5e5; 
-  }
-
-  .tag_box a.active {
-    background: #57A957;
-    border: 1px solid #4c964d;
-    color: #FFF; 
-  }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    -webkit-border-radius: 100px;
-  }
-
-  ::-webkit-scrollbar:hover {
-    background-color: rgba(0, 0, 0, 0.09);
-  }
-
-  ::-webkit-scrollbar-thumb:vertical {
-    background: rgba(0, 0, 0, 0.5);
-    -webkit-border-radius: 100px;
-    background-clip: padding-box;
-    border: 2px solid rgba(0, 0, 0, 0);
-    min-height: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb:vertical:active {
-    background: rgba(0, 0, 0, 0.61);
-    -webkit-border-radius: 100px;
-  }
-    </style>
-
     <body class="theme-base-08">
-    <!-- AddThis Smart Layers BEGIN -->
-<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-53641f1f19852796"></script>
-<script type="text/javascript">
-  addthis.layers({
-    'theme' : 'transparent',
-    'share' : {
-      'position' : 'right',
-      'numPreferredServices' : 5
-    },
-    'follow' : {
-      'services' : [
-        {'service': 'facebook', 'id': 'RockerRishiRaj'},
-        {'service': 'twitter', 'id': 'Rocker_Raj29'},
-        {'service': 'linkedin', 'id': 'rishirajsinghjhelumi'},
-        {'service': 'google_follow', 'id': '+RishiRajSinghJhelumi'}
-      ]
-    }
-  });
-</script>
-<!-- AddThis Smart Layers END -->
 
       <header class="masthead">
         <div class="masthead-inner">
@@ -283,6 +177,16 @@
     data-view_type="FILTERED_POSTMOD">
 </div>
     </div>
+    <script src="/public/js/share.min.js"></script>
+    <script>
+      var share = new Share("#share-button", {
+        networks: {
+          facebook: {
+            app_id: "233812050149206",
+          }
+        }
+      });
+</script>
   </body>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
