@@ -84,3 +84,8 @@ img.emoji{
   margin-top: 0px;
   float: right;
 }
+.follow{
+  width: 30px;
+  height: 30px;
+  display: inline;
+}
