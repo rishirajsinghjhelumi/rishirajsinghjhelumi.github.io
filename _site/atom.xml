@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Rishi Raj Singh Jhelumi</title>
- <link href="http://rishirajsinghjhelumi.github.io/atom.xml" rel="self"/>
- <link href="http://rishirajsinghjhelumi.github.io/"/>
- <updated>2014-05-18T14:53:07+05:30</updated>
- <id>http://rishirajsinghjhelumi.github.io</id>
+ <link href="http://rrsj.org/atom.xml" rel="self"/>
+ <link href="http://rrsj.org/"/>
+ <updated>2014-05-18T16:31:57+05:30</updated>
+ <id>http://rrsj.org</id>
  <author>
    <name>Rishi Raj Singh Jhelumi</name>
-   <email>rishiraj.devel@gmail.com</email>
+   <email>rishi@rrsj.org</email>
  </author>
 
  
  <entry>
    <title>GSoC 2014 with GNOME Maps !!</title>
-   <link href="http://rishirajsinghjhelumi.github.io/2014/05/01/GSoC-GNOME/"/>
+   <link href="http://rrsj.org/2014/05/01/GSoC-GNOME/"/>
    <updated>2014-05-01T00:00:00+05:30</updated>
-   <id>http://rishirajsinghjhelumi.github.io/2014/05/01/GSoC-GNOME</id>
+   <id>http://rrsj.org/2014/05/01/GSoC-GNOME</id>
    <taglist>
    		
    			<tag>GNOME</tag>
@@ -54,9 +54,9 @@ Jonas has depicted the same with examples through his &lt;a href=&quot;http://jo
  
  <entry>
    <title>Hello, Fork!!</title>
-   <link href="http://rishirajsinghjhelumi.github.io/2014/04/30/hello-world/"/>
+   <link href="http://rrsj.org/2014/04/30/hello-world/"/>
    <updated>2014-04-30T00:00:00+05:30</updated>
-   <id>http://rishirajsinghjhelumi.github.io/2014/04/30/hello-world</id>
+   <id>http://rrsj.org/2014/04/30/hello-world</id>
    <taglist>
    		
    			<tag>Introduction</tag>
