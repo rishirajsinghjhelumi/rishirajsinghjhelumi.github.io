@@ -1,11 +1,11 @@
 title:        'Rishi Raj Singh Jhelumi'
 tagline:      'Lets R(){ R|R& };R'
 description:  'My Fork/Tech Bombs ( R(){ R|R& };R ).'
-url:          http://rishirajsinghjhelumi.github.io
+url:          http://rrsj.org
 version:      1.0.0
 author:
   name:       'Rishi Raj Singh Jhelumi'
-  email:      'rishiraj.devel@gmail.com'
+  email:      'rishi@rrsj.org'
 markdown:     rdiscount
 permalink:    pretty
 pygments:     true
