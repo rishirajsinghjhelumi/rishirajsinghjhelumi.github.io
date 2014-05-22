@@ -4,7 +4,7 @@
  <title>Rishi Raj Singh Jhelumi</title>
  <link href="http://rrsj.org/atom.xml" rel="self"/>
  <link href="http://rrsj.org/"/>
- <updated>2014-05-22T23:17:43+05:30</updated>
+ <updated>2014-05-23T00:28:17+05:30</updated>
  <id>http://rrsj.org</id>
  <author>
    <name>Rishi Raj Singh Jhelumi</name>
@@ -13,14 +13,88 @@
 
  
  <entry>
-   <title>Summer With Maps Part: 1</title>
-   <link href="http://rrsj.org/2014/05/22/Summer-with-MAPS-Part%3A-1/"/>
+   <title>Summer with MAPS Part 1</title>
+   <link href="http://rrsj.org/2014/05/22/Summer-with-Maps-Part%3A-1/"/>
    <updated>2014-05-22T00:00:00+05:30</updated>
-   <id>http://rrsj.org/2014/05/22/Summer-with-MAPS-Part:-1</id>
+   <id>http://rrsj.org/2014/05/22/Summer-with-Maps-Part:-1</id>
    <taglist>
    		
+   			<tag>GNOME</tag>
+   		
+   			<tag>Maps</tag>
+   		
+   			<tag>GSoC</tag>
+   		
+   			<tag>GSoC Reports</tag>
+   		
    </taglist>
-   <content type="html">
+   <content type="html">&lt;p&gt;&lt;b&gt;Hi all!!&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;This is my first report on working on GNOME Maps.
+I have worked on a few features which I will be describing below.&lt;/p&gt;
+
+&lt;h2&gt;Querying of POIs&lt;/h2&gt;
+
+&lt;p&gt;I wrote a gjs overpass query manager (a wrapper perhaps) that fetches the POIs provided by OSM using the &lt;a href=&quot;http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL&quot;&gt;Overpass Query Language&lt;/a&gt;.
+Basically, it can be configured to add types of POIs(tags) that needs to be fetched from the overpass, takes as input a &lt;a href=&quot;http://wiki.openstreetmap.org/wiki/Bounding_Box&quot;&gt;Bounding Box&lt;/a&gt; and it will generate the corresponding URL containing the query that can be understood by Overpass.&lt;/p&gt;
+
+&lt;p&gt;The code can be found &lt;a href=&quot;https://github.com/rishirajsinghjhelumi/GNOME-Maps/blob/poi-testing/src/overpass.js&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4&gt;A simple usage demo&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;let QM = new Overpass({
+    &#39;timeout&#39; : 600,
+    &#39;outputCount&#39; : 1000,
+    &#39;outputFormat&#39; : &#39;json&#39;
+});
+
+QM.addSearchTag(&#39;amenity&#39;, &#39;pub&#39;);
+QM.addSearchTag(&#39;amenity&#39;, &#39;hospital&#39;);
+QM.addSearchTag(&#39;amenity&#39;, &#39;fast_food&#39;);
+QM.addSearchTag(&#39;amenity&#39;, &#39;restaurant&#39;);
+QM.addSearchTag(&#39;amenity&#39;, &#39;library&#39;);
+
+let bbox = {
+    &#39;bottom&#39;: 41.7,
+    &#39;left&#39;: -0.4,
+    &#39;top&#39;: 41.8,
+    &#39;right&#39;: -88.3
+};
+let queryUrl = QM.getQueryUrl(bbox);
+
+log(queryUrl);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This URL can then be queried to the server that will return the POIs as a JSON.&lt;/p&gt;
+
+&lt;h2&gt;Selection of POIs&lt;/h2&gt;
+
+&lt;p&gt;I wrote a couple of scripts to get the tags available in OSM and getting the count information relating to that tag.
+&lt;a href=&quot;taginfo.openstreetmap.org&quot;&gt;Taginfo&lt;/a&gt; provided a wealth of information regarding the tags.
+The selection of POIs is an ongoing process. &lt;a href=&quot;https://plus.google.com/+MattiasBengtsson&quot;&gt;Mattias&lt;/a&gt;, &lt;a href=&quot;https://plus.google.com/103582536569221580484&quot;&gt;Jonas&lt;/a&gt;, &lt;a href=&quot;https://plus.google.com/107646837068615384568&quot;&gt;Andreas&lt;/a&gt; and myself are working on selecting the best set of POIs that will be shown to the user.&lt;/p&gt;
+
+&lt;h2&gt;Overlaying of POIs&lt;/h2&gt;
+
+&lt;p&gt;POIs are shown on a separate layer, i.e., a layer on top of the map-tiles layer (the layer which displays the map images). This layer contains only the clickable location markers corresponding to a POI, clicking on them provides information regarding the POI.&lt;/p&gt;
+
+&lt;h2&gt;Caching of POIs&lt;/h2&gt;
+
+&lt;p&gt;The caching of POIs is done so that when the user pans away from a place, and then returns the overpass is not queried.
+It is done in a similar fashion like the tiles image caching in maps.
+&lt;a href=&quot;https://wiki.gnome.org/Projects/libchamplain&quot;&gt;Libchamplain&lt;/a&gt; provides apis for caching, so that you can write your own virtual functions on what to cache, and it will do the rest, both in memory and file system.&lt;/p&gt;
+
+&lt;h2&gt;Rendering of POIs&lt;/h2&gt;
+
+&lt;p&gt;Since I was caching POIs, that are nothing but a place marker in the form of JSON data, a POI renderer was required by libchamplain so that it knows how to render the data that it has cached.&lt;/p&gt;
+
+&lt;p&gt;One of my tasks will be to make this renderer as generalised as possible, so that it can be used for User Checkins (another Maps project by &lt;a href=&quot;https://plus.google.com/+Dami%C3%A1nNohales&quot;&gt;Damian&lt;/a&gt;) also, and possibly other things that have place information encoded as JSON.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+
+&lt;p&gt;Meanwhile, my next task would be to write a function that selects an icon for a given poi type. This function would exist in &lt;a href=&quot;https://developer.gnome.org/geocode-glib/stable/&quot;&gt;geocode-glib&lt;/a&gt; library, and will be using &lt;a href=&quot;https://github.com/mapbox/maki&quot;&gt;Maki POI Icons&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I will be writing another blog soon depicting more functionality I add.&lt;/p&gt;
 </content>
  </entry>
  
