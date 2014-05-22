@@ -4,63 +4,63 @@
   
   
   <url>
-    <loc>http://rrsj.org/2014/05/01/GSoC-GNOME/</loc>
-    <lastmod>2014-05-01T00:00:00+05:30</lastmod>
+    <loc>http://rrsj.org/2014/05/22/Summer-with-MAPS-Part%3A-1/</loc>
+    <lastmod>2014-05-22T00:00:00+05:30</lastmod>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>http://rrsj.org/2014/04/30/hello-world/</loc>
-    <lastmod>2014-04-30T00:00:00+05:30</lastmod>
+    <loc>http://rrsj.org/2014/05/01/GSoC-GNOME/</loc>
+    <lastmod>2014-05-01T00:00:00+05:30</lastmod>
     <priority>0.8</priority>
   </url>
   
   
   <url>
     <loc>http://rrsj.org/atom.xml</loc>
-    <lastmod>2014-05-18T16:31:57+05:30</lastmod>
+    <lastmod>2014-05-22T23:17:43+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/about/</loc>
-    <lastmod>2014-05-18T16:31:57+05:30</lastmod>
+    <lastmod>2014-05-22T23:17:43+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/archive/</loc>
-    <lastmod>2014-05-18T16:31:57+05:30</lastmod>
+    <lastmod>2014-05-22T23:17:43+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/</loc>
-    <lastmod>2014-05-18T16:31:57+05:30</lastmod>
+    <lastmod>2014-05-22T23:17:43+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://rrsj.org/tag/Introduction/</loc>
-    <lastmod>2014-05-18T16:31:57+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
     <loc>http://rrsj.org/tag/GNOME/</loc>
-    <lastmod>2014-05-18T16:31:57+05:30</lastmod>
+    <lastmod>2014-05-22T23:17:43+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/GSoC/</loc>
-    <lastmod>2014-05-18T16:31:57+05:30</lastmod>
+    <lastmod>2014-05-22T23:17:43+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://rrsj.org/tag/Introduction/</loc>
+    <lastmod>2014-05-22T23:17:43+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
