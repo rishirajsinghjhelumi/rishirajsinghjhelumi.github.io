@@ -18,63 +18,63 @@
   
   <url>
     <loc>http://rrsj.org/atom.xml</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/about/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/archive/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/GNOME/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/Maps/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/GSoC/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/GSoC Reports/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/Introduction/</loc>
-    <lastmod>2014-05-23T00:28:17+05:30</lastmod>
+    <lastmod>2014-05-23T20:14:06+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
