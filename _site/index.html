@@ -119,6 +119,52 @@
   
   <div class="post">
     <h1>
+      <a href="/2014/06/11/Summer-with-Maps-Part%3A-2/">
+        Summer with MAPS Part 2
+      </a>
+    </h1>
+
+    <span class="post-date">11 Jun 2014</span>
+
+    <p>Hi all!!</p>
+
+<p><img src="/public/img/maps.png" title="Maps" style="float:right;"/></p>
+
+<p>This is my second report on my work with GNOME-Maps on POIs.
+For the past week I have been working on Supporting different POI icon types in Maps.
+Geocode-glib provides a few pois (around 11) but the subset of POIs we will be selecting to display will be larger than that. So somehow we needed to add support for these extra icons also.</p>
+
+<p>The icons used in the Maps application for displaying specific place types like railway stations, schools, bars and a few others are taken from geocode-glib place-type.
+So, there is a dependency for these icons on geocode-glib.</p>
+
+<p>So, My mentor(<a href="https://plus.google.com/+MattiasBengtsson">Mattias</a>) and me had a little chat with <a href="https://plus.google.com/+BastienNocera">Bastien</a> (hadess) and he suggested to include the icons in the Maps application itself rather than I providing patches for each of those, and later if a place type becomes necessary for other application it might be good option to move it to geocode-glib later.</p>
+
+<p>So, I extended the GeocodePlace and made a Place class for the maps itself which can be used to fit our needs. Thus, removing the dependency on icons from the geocode-glib library.
+This class will have its own function for getting and loading the icons for the specified type and it can be extended to support any other function that needs to be associated with a Place, say for example, information about a place from wikipedia or any other source, chekins, or some images of a place etc (A Map application can really have a lot of features!!).</p>
+
+<p>The icon set I am using is <a href="https://github.com/mapbox/maki">Maki Icons</a> which is also used by geocode-glib.</p>
+
+<h2>Whats Next</h2>
+
+<p>I will be rebasing my code to the latest Maps commit and will be submitting the first batch of patches for review on bugzilla.
+And a bit of work on UI Popover for the POIs.</p>
+
+<h2>GUADEC</h2>
+
+<p>I am thankful to GNOME for providing me travel sponsorship and accomodation for GUADEC.
+This will the first time I will be taking part and I am really excited about it.</p>
+
+<p><img
+    src="/public/img/sponsored-badge-shadow.png"
+    title="GUADEC"
+    style="display: block;
+    margin-left: auto;
+    margin-right: auto;"/></p>
+
+  </div>
+  
+  <div class="post">
+    <h1>
       <a href="/2014/05/22/Summer-with-Maps-Part%3A-1/">
         Summer with MAPS Part 1
       </a>
