@@ -8,10 +8,10 @@
 <meta name="twitter:site" content="@Rocker_Raj29">
 <meta name="twitter:creator" content="@Rocker_Raj29">
 
-  <meta name="twitter:title" content="Summer with MAPS Part 1">
+  <meta name="twitter:title" content="Summer with MAPS Part 3">
 
 
-  <meta name="twitter:url" content="http://rrsj.org/2014/05/22/Summer-with-Maps-Part%3A-1/">
+  <meta name="twitter:url" content="http://rrsj.org/2014/07/12/Summer-with-Maps-Part%3A-3/">
 
 
   <meta name="twitter:description" content="My Fork/Tech Bombs ( R(){ R|R& };R ).">
@@ -21,7 +21,7 @@
 
   <meta content="Rishi Raj Singh Jhelumi" property="og:site_name">
 
-  <meta content="Summer with MAPS Part 1" property="og:title">
+  <meta content="Summer with MAPS Part 3" property="og:title">
 
 
   <meta content="article" property="og:type">
@@ -30,10 +30,10 @@
   <meta content="My Fork/Tech Bombs ( R(){ R|R& };R )." property="og:description">
 
 
-  <meta content="http://rrsj.org/2014/05/22/Summer-with-Maps-Part%3A-1/" property="og:url">
+  <meta content="http://rrsj.org/2014/07/12/Summer-with-Maps-Part%3A-3/" property="og:url">
 
 
-  <meta content="2014-05-22T00:00:00+05:30" property="article:published_time">
+  <meta content="2014-07-12T00:00:00+05:30" property="article:published_time">
   <meta content="http://rrsj.org/about/" property="article:author">
 
 
@@ -56,7 +56,7 @@
   <link href="" rel="profile">
 
   <title>
-    Summer with MAPS Part 1 &middot; 
+    Summer with MAPS Part 3 &middot; 
     Lets R(){ R|R& };R
   </title>
 
@@ -131,8 +131,8 @@
 
     <div class="content container">
       <div class="post">
-  <h1>Summer with MAPS Part 1</h1>
-  <span class="post-date">22 May 2014</span>
+  <h1>Summer with MAPS Part 3</h1>
+  <span class="post-date">12 Jul 2014</span>
   <ul class="tag_box inline">
       
         <li>
@@ -153,73 +153,33 @@
       
   </ul>
   <br/>
-  <p><b>Hi all!!</b></p>
+  <p>Hi all!!</p>
 
-<p>This is my first report on working on GNOME Maps.
-I have worked on a few features which I will be describing below.</p>
+<p><img src="/public/img/maps.png" title="Maps" style="float:right;"/></p>
 
-<h2>Querying of POIs</h2>
+<p>This is my third report on my work with GNOME-Maps on POIs.
+Its almost a month now from my previous post.</p>
 
-<p>I wrote a gjs overpass query manager (a wrapper perhaps) that fetches the POIs provided by OSM using the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">Overpass Query Language</a>.
-Basically, it can be configured to add types of POIs(tags) that needs to be fetched from the overpass, takes as input a <a href="http://wiki.openstreetmap.org/wiki/Bounding_Box">Bounding Box</a> and it will generate the corresponding URL containing the query that can be understood by Overpass.</p>
+<h2>What Was Done !!</h2>
 
-<p>The code can be found <a href="https://github.com/rishirajsinghjhelumi/GNOME-Maps/blob/poi-testing/src/overpass.js">here</a>.</p>
-
-<h4>A simple usage demo</h4>
-
-<pre><code class="javascript">let QM = new Overpass({
-    'timeout' : 600,
-    'outputCount' : 1000,
-    'outputFormat' : 'json'
-});
-
-QM.addSearchTag('amenity', 'pub');
-QM.addSearchTag('amenity', 'hospital');
-QM.addSearchTag('amenity', 'fast_food');
-QM.addSearchTag('amenity', 'restaurant');
-QM.addSearchTag('amenity', 'library');
-
-let bbox = {
-    'bottom': 41.7,
-    'left': -0.4,
-    'top': 41.8,
-    'right': -88.3
-};
-let queryUrl = QM.getQueryUrl(bbox);
-
-log(queryUrl);
-</code></pre>
-
-<p>This URL can then be queried to the server that will return the POIs as a JSON.</p>
-
-<h2>Selection of POIs</h2>
-
-<p>I wrote a couple of scripts to get the tags available in OSM and getting the count information relating to that tag.
-<a href="taginfo.openstreetmap.org">Taginfo</a> provided a wealth of information regarding the tags.
-The selection of POIs is an ongoing process. <a href="https://plus.google.com/+MattiasBengtsson">Mattias</a>, <a href="https://plus.google.com/103582536569221580484">Jonas</a>, <a href="https://plus.google.com/107646837068615384568">Andreas</a> and myself are working on selecting the best set of POIs that will be shown to the user.</p>
-
-<h2>Overlaying of POIs</h2>
-
-<p>POIs are shown on a separate layer, i.e., a layer on top of the map-tiles layer (the layer which displays the map images). This layer contains only the clickable location markers corresponding to a POI, clicking on them provides information regarding the POI.</p>
-
-<h2>Caching of POIs</h2>
-
-<p>The caching of POIs is done so that when the user pans away from a place, and then returns the overpass is not queried.
-It is done in a similar fashion like the tiles image caching in maps.
-<a href="https://wiki.gnome.org/Projects/libchamplain">Libchamplain</a> provides apis for caching, so that you can write your own virtual functions on what to cache, and it will do the rest, both in memory and file system.</p>
-
-<h2>Rendering of POIs</h2>
-
-<p>Since I was caching POIs, that are nothing but a place marker in the form of JSON data, a POI renderer was required by libchamplain so that it knows how to render the data that it has cached.</p>
-
-<p>One of my tasks will be to make this renderer as generalised as possible, so that it can be used for User Checkins (another Maps project by <a href="https://plus.google.com/+Dami%C3%A1nNohales">Damian</a>) also, and possibly other things that have place information encoded as JSON.</p>
-
-<hr/>
+<ul>
+<li><p>Previously, I used ChamplainTileSource to render and place the POI icons. So, the location of the POI was limited to the Tile. So, the issue of cutting of POI icons came up when the POIs were close to the tile boundaries. So, instead of placing the Markers seperately on each Tile, a ChamplainMarker Layer was used which covers the MapView and the issue was solved. ChamplainTileSource is still used for caching and POI rendering purposes. This work will further be modified and be based on Damians work on Popover.</p></li>
+<li><p>Added Icons from the Maki POI icon library and used them in GNOME Maps. Still unsure and in disussion whether we should use icons provided by Geocode-Glib or remove the dependency from it.</p></li>
+<li><p>Splitted up the work done into Patches and submitted it for reviews. (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=731587">Support for POIs</a>)</p></li>
+</ul>
 
 
-<p>Meanwhile, my next task would be to write a function that selects an icon for a given poi type. This function would exist in <a href="https://developer.gnome.org/geocode-glib/stable/">geocode-glib</a> library, and will be using <a href="https://github.com/mapbox/maki">Maki POI Icons</a>.</p>
+<h2>Whats Next !!</h2>
 
-<p>I will be writing another blog soon depicting more functionality I add.</p>
+<ul>
+<li><p>Clean up and base all my patches submitted so far on Damians work on Popover.<a href="https://bugzilla.gnome.org/show_bug.cgi?id=722871">Use GtkPopover instead of ChamplainMarker</a></p></li>
+<li><p>Implement Popover Design for POIs</p></li>
+<li><p>Get POI info from Wikipedia if available</p></li>
+<li><p>Plugin Routing (i.e, Select this as a start, destination or VIA point)</p></li>
+<li><p>Plugin Damians CheckIn Patches in the POI Popovers (i.e, let users checkin on this place)</p></li>
+<li><p>GUADEC <img class='emoji' title=':smiley:' alt=':smiley:' src='https://assets.github.com/images/icons/emoji/smiley.png' height='20' width='20' align='absmiddle' /></p></li>
+</ul>
+
 
   <span id="share-button" class="share-button"></span>
 </div>
@@ -230,18 +190,18 @@ It is done in a similar fashion like the tiles image caching in maps.
     
       <li>
         <h3>
-          <a href="/2014/07/12/Summer-with-Maps-Part%3A-3/">
-            Summer with MAPS Part 3
-            <small>12 Jul 2014</small>
+          <a href="/2014/06/11/Summer-with-Maps-Part%3A-2/">
+            Summer with MAPS Part 2
+            <small>11 Jun 2014</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/2014/06/11/Summer-with-Maps-Part%3A-2/">
-            Summer with MAPS Part 2
-            <small>11 Jun 2014</small>
+          <a href="/2014/05/22/Summer-with-Maps-Part%3A-1/">
+            Summer with MAPS Part 1
+            <small>22 May 2014</small>
           </a>
         </h3>
       </li>
