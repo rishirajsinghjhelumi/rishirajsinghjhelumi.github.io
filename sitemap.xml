@@ -4,6 +4,12 @@
   
   
   <url>
+    <loc>http://rrsj.org/2014/09/02/GSoC-and-GUADEC/</loc>
+    <lastmod>2014-09-02T00:00:00+05:30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://rrsj.org/2014/07/12/Summer-with-Maps-Part%3A-3/</loc>
     <lastmod>2014-07-12T00:00:00+05:30</lastmod>
     <priority>0.8</priority>
@@ -30,63 +36,70 @@
   
   <url>
     <loc>http://rrsj.org/atom.xml</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/about/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/archive/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/GNOME/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/Maps/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/GSoC/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/GSoC Reports/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://rrsj.org/tag/GUADEC/</loc>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://rrsj.org/tag/Introduction/</loc>
-    <lastmod>2014-07-13T20:11:11+05:30</lastmod>
+    <lastmod>2014-09-02T19:37:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
